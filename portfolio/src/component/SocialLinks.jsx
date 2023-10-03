@@ -46,9 +46,11 @@ function SocialLinks() {
       href: '/Resume-Hishmat-Rai.pdf',
       style:'rounded-br-md'
     },
-  ]
+  ];
+
+
   return (
-    <div className='flex flex-col top-[35%] left-0 fixed'>
+    <div className='hidden lg:flex flex-col top-[35%] left-0 fixed'>
       
       <ul>
 
@@ -61,9 +63,9 @@ function SocialLinks() {
               target= "_blank"
               rel="noreferrer"
             >
-            
-            {child}
-            </a></li>
+              {child}
+            </a>
+          </li>
 
         ))}
       </ul>
