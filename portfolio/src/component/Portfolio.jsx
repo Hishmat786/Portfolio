@@ -4,7 +4,7 @@ import calculator from "../assets/portfolio/cgpaCalcu.jpg";
 import hostel from "../assets/portfolio/hostel.png";
 import voter from "../assets/portfolio/voter.jpg";
 import webScrap from "../assets/portfolio/webscrapping.png";
-
+import potatoHead from "../assets/portfolio/potatoHead.jpg";
 
 const Portfolio = () => {
 
@@ -25,6 +25,10 @@ const Portfolio = () => {
             id: 4,
             src: webScrap
         },
+        {
+            id: 5,
+            src: potatoHead
+        },
         
     ]
   return (
@@ -35,48 +39,19 @@ const Portfolio = () => {
                 <p className='py-6'>Check out some of my work right here</p>
             </div>
 
-            {
-                profiles.map(({id,src}) =>{
-                    <div key={id} className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                        <div className='shadow-md shadow-gray-600 rounded-lg '>
-                            <img src={src} 
-                            alt='' className='rounded-md duration-200 hover:scale-105'/>
-                            <div className='flex items-center justify-center'>
-                                <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                                <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Code</button>
-                            </div>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+
+                {profiles.map(({id,src}) =>(
+                    <div key={id} className='shadow-md shadow-gray-600 rounded-lg '>
+                    <img src={src}                                          alt='' className='rounded-md duration-200 hover:scale-105'/>
+                        <div className='flex items-center justify-center'>
+                            <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
+                            <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Code</button>
                         </div>
                     </div>
-                })
-            }
+                ))}
+            </div>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                <div className='shadow-md shadow-gray-600 rounded-lg '>
-                    <img src={calculator} alt='' className='rounded-md duration-200 hover:scale-105'/>
-                    <div className='flex items-center justify-center'>
-                        <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                        <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Code</button>
-                    </div>
-                </div>
-            </div>
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                <div className='shadow-md shadow-gray-600 rounded-lg '>
-                    <img src={calculator} alt='' className='rounded-md duration-200 hover:scale-105'/>
-                    <div className='flex items-center justify-center'>
-                        <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                        <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Code</button>
-                    </div>
-                </div>
-            </div>
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                <div className='shadow-md shadow-gray-600 rounded-lg '>
-                    <img src={calculator} alt='' className='rounded-md duration-200 hover:scale-105'/>
-                    <div className='flex items-center justify-center'>
-                        <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                        <button className='w-1/2  px-4 py-3 m-4 duration-200 hover:scale-105'>Code</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
   );
