@@ -1,7 +1,7 @@
 import React from 'react';
 import profile from "../assets/prof_pic.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md" 
-import Link from "react-scroll";
+import {Link} from "react-scroll";
 
 const Home = () => {
   return (
@@ -15,20 +15,17 @@ const Home = () => {
                 React, Tailwind, NextJS and MongoDB</p>
 
                 <div>
-                    <Link 
-                    to="Portfolio" 
-                    smooth 
-                    duration={300} 
-                    className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500  to-blue-500'>
+                    <Link to='portfolio' smooth duration={500}
+                    className='group cursor-pointer text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500  to-blue-500'>
                         Portfolio
                         <span className='group-hover:rotate-90 duration-300'>
                             <MdOutlineKeyboardArrowRight size={25} className='ml-1'/> 
                         </span> 
                     </Link>
-                </div>
+                </div> 
             </div>
             <div>
-                <img src={profile }  alt="myPtofile" className='rounded-2xl mx-auto w-2/3 md:w-full '/>
+                <img src={profile }  alt="myPtofile" className='rounded-4xl h-full mx-auto w-2/3 md:w-full '/>
             </div>
         </div>
     </div>
